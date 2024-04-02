@@ -1,6 +1,8 @@
 # Container image that runs your code
 FROM python:3.12-bullseye
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Installs ImageMagick with AVIF support
 RUN apt remove "*imagemagick*" --purge -y && apt autoremove --purge -y
 

@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
-poetry install --no-root
+poetry install
 poetry run blurry build

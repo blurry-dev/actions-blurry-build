@@ -1,16 +1,16 @@
 # action.yml
 name: 'Setup Blurry'
 description: 'Builds a static site using Blurry'
-# inputs:
-#   who-to-greet:  # id of input
-#     description: 'Who to greet'
-#     required: true
-#     default: 'World'
+inputs:
+  site-root:
+    description: 'Path to the site root, i.e. a directory containing blurry.toml'
+    required: true
+    default: './'
 # outputs:
 #   time: # id of output
 #     description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  # args:
-  #   - ${{ inputs.who-to-greet }}
+  args:
+    - ${{ inputs.site-root }}

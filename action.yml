@@ -1,16 +1,16 @@
 # action.yml
-name: 'Setup Blurry'
-description: 'Builds a static site using Blurry'
+name: "Blurry Build"
+description: "Builds a static site using Blurry, a static site generator focused on page speed and SEO"
 inputs:
   site-root:
-    description: 'Path to the site root, i.e. a directory containing blurry.toml'
+    description: "Path to the site root, i.e. a directory containing blurry.toml"
     required: true
-    default: './'
-# outputs:
-#   time: # id of output
-#     description: 'The time we greeted you'
+    default: "./"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.site-root }}
+branding:
+  icon: eye
+  color: yellow
